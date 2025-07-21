@@ -8,6 +8,6 @@ jobs:
       - step: Checkout
         uses: actions/checkout@v4
       - step: Build-docker
-        runs: docker build -t helloworld:latest .
+        run: docker build -t helloworld:latest .
       - step: Run-docker
-        runs: docker run helloworld
+        run: docker run helloworld
