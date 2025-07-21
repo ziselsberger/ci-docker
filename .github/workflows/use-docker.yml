@@ -1,5 +1,4 @@
-trigger: 
-  on: push
+on: push
 
 runs-on: ubuntu-latest
 
