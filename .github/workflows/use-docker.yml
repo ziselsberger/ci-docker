@@ -6,7 +6,7 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Build-docker
-        run: docker build -t helloworld:latest .
-      - name: Run-docker
-        run: docker run helloworld
+      - name: Build and run docker file
+        run: |
+          docker build -t helloworld:latest .
+          docker run helloworld
