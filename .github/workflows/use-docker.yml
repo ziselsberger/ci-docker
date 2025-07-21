@@ -1,13 +1,12 @@
 on: push
 
-runs-on: ubuntu-latest
-
 jobs:
   use-docker:
+    runs-on: ubuntu-latest
     steps:
-      - step: Checkout
+      - name: Checkout
         uses: actions/checkout@v4
-      - step: Build-docker
+      - name: Build-docker
         run: docker build -t helloworld:latest .
-      - step: Run-docker
+      - name: Run-docker
         run: docker run helloworld
